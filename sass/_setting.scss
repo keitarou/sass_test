@@ -1,0 +1,15 @@
+// 変数
+$fontSize: 20px;
+$fontColor: #ff0000;
+$bgImg: "./../img/";
+$mode: true;
+
+// リスト
+$fontColorList: red, blue, green;
+
+//minin
+@mixin border($borderWidth:4px) {
+	border: solid #{$borderWidth} #ff0000;
+	font-size: 40px;
+	color: #00ff00;
+}

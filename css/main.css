@@ -1,0 +1,58 @@
+body {
+  background-color: #ff4400;
+  background-image: url("./../img/usi.jpg");
+}
+body .p1 {
+  font-size: 20px;
+}
+body .p1:hover {
+  font-size: 40px;
+}
+body .p2 {
+  font-size: 40px;
+}
+body .p3 {
+  font-size: 20px;
+  color: #ff9999;
+}
+body .p4 {
+  font-size: 20px;
+  color: blue;
+}
+body .p5 {
+  font-size: 60px;
+}
+body .p6 {
+  border: solid 4px red;
+  font-size: 40px;
+  color: #00ff00;
+}
+body .p7, body .p8 {
+  border: solid 10px red;
+  font-size: 40px;
+  color: #00ff00;
+}
+body ul .li1 {
+  font-size: 10;
+}
+body ul .li2 {
+  font-size: 20;
+}
+body ul .li3 {
+  font-size: 30;
+}
+body ul .li4 {
+  font-size: 40;
+}
+body ul .li5 {
+  font-size: 50;
+}
+body ul .red {
+  color: red;
+}
+body ul .blue {
+  color: blue;
+}
+body ul .green {
+  color: green;
+}

@@ -1,0 +1,89 @@
+// nocomment
+
+// 変数（数値、文字列、真偽、色、リスト）
+
+// 色に関する変数 
+// 指定した値分明るくする　lighten(color, parcent)
+// 指定した値分暗くする　darken(color, parcent)
+
+// 条件分岐
+// @if @else
+
+// ループ
+// @for @while @each
+// 例：@for $i from 1 through 5
+// 例：@each value in list
+
+//関数
+// @function(){@return}
+
+// デバッグ
+// @debug $param
+
+// 他のファイル呼び出し
+// @import "file";
+// ※ファイル名は _file.scss のように _から始める
+
+// mixin 設定をまとめる
+// include で呼び出す
+// 引数を与える事もできる
+
+// 他で設定しているスタイルの継承
+// @extend
+
+
+
+
+@import "setting";
+@import "function";
+body{
+	background-color: #ff4400;
+	background-image: url("#{$bgImg}usi.jpg");
+	.p1{
+		font-size: $fontSize;
+		&:hover{
+			font-size:40px;
+		}
+	}
+	.p2{
+		font-size: $fontSize*2;
+	}
+	.p3{
+		font-size: $fontSize;
+		color: lighten($fontColor, 30%);
+	}
+	.p4{
+		font-size: $fontSize;
+		@if $mode{
+			color: blue;
+		}@else{
+			color: red;
+		}
+	}
+	.p5{
+		font-size: sum(30px, 30px);
+	}
+	.p6{
+		@include border();
+	}
+	.p7{
+		@include border(10px);
+	}
+	.p8{
+		@extend .p7;
+	}
+
+	ul{
+		@for $i from 1 through 5{
+			.li#{$i}{
+				font-size: $i*10;
+			}
+		}
+		@each $color in $fontColorList{
+			.#{$color}{
+				color: $color;
+			}
+		}
+	}
+
+}
